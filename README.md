@@ -23,7 +23,7 @@ b. The **setSelectedIndex** in the **WrappedListComponent** is incorrectly defin
 ```const [selectedIndex, setSelectedIndex] = useState(null);```
 
 
-c. The **isSelected' prop passed to the **SingleListItem** should be a boolean value indicating whether the current item is selected or not. So instead of assigning it to the **selectedIndex** we should assign it to the value returned by  the expression **selectedIndex === index**.
+c. The **isSelected** prop passed to the **SingleListItem** should be a boolean value indicating whether the current item is selected or not. So instead of assigning it to the **selectedIndex** we should assign it to the value returned by  the expression **selectedIndex === index**.
 
 
 d. The **propTypes** for the **items** prop of **WrappedListComponent** is not correctly defined, It should be defined as follows - 
