@@ -28,6 +28,7 @@ c. The **isSelected' prop passed to the **SingleListItem** should be a boolean v
 
 d. The **propTypes** for the **items** prop of **WrappedListComponent** is not correctly defined, It should be defined as follows - 
 
+
 `
  WrappedListComponent.propTypes = {
  
@@ -44,6 +45,7 @@ d. The **propTypes** for the **items** prop of **WrappedListComponent** is not c
 };
 
 `
+
 
 e. In the **List** component, the propTypes for the **items** prop is incorrectly assigned to
 **null**. Instead it should be set to an empty array **[]** as shown below.
