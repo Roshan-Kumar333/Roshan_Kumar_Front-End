@@ -17,3 +17,33 @@ a. In the **Single List Item Component**, the **onClickHandler** Function will b
 Instead of this we should assign a callback function to the **onClick** event such that the **onClickHandler** function will be invoked only when the corresponding event occurs like shown below
 
 `onClick={() => onClickHandler(index)}`
+
+b. The **setSelectedIndex** in the **WrappedListComponent** is incorrectly defined as a function instead of a state variable. The correct code should be:
+
+`const [selectedIndex, setSelectedIndex] = useState(null);`
+
+
+c. The **isSelected' prop passed to the **SingleListItem** should be a boolean value indicating whether the current item is selected or not. So instead of assigning it to the **selectedIndex** we should assign it to the value returned by  the expression **selectedIndex === index**.
+
+
+d. The **propTypes** for the **items** prop of **WrappedListComponent** is not correctly defined, It should be defined as follows - 
+
+`
+ WrappedListComponent.propTypes = {
+  items: PropTypes.arrayOf(
+    PropTypes.shape({
+      text: PropTypes.string.isRequired,
+    })
+  ),
+};
+`
+
+e. In the **List** component, the propTypes for the **items** prop is incorrectly assigned to
+**null**. Instead it should be set to an empty array **[]** as shown below.
+
+`
+WrappedListComponent.defaultProps = {
+  items: [],
+};
+`
+
