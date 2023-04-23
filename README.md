@@ -30,20 +30,13 @@ d. The **propTypes** for the **items** prop of **WrappedListComponent** is not c
 
 
 `
- WrappedListComponent.propTypes = {
- 
-  items: PropTypes.arrayOf(
-  
-    PropTypes.shape({
-    
-      text: PropTypes.string.isRequired,
-      
-    })
-    
-  ),
-  
-};
-
+ WrappedListComponent.propTypes = {  
+  items: PropTypes.arrayOf(  
+    PropTypes.shape({  
+      text: PropTypes.string.isRequired,   
+    })  
+  ),  
+};  
 `
 
 
@@ -51,8 +44,8 @@ e. In the **List** component, the propTypes for the **items** prop is incorrectl
 **null**. Instead it should be set to an empty array **[]** as shown below.
 
 `
-WrappedListComponent.defaultProps = {
-  items: [],
-};
+WrappedListComponent.defaultProps = {  
+  items: [],  
+};   
 `
 
