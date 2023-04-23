@@ -30,12 +30,19 @@ d. The **propTypes** for the **items** prop of **WrappedListComponent** is not c
 
 `
  WrappedListComponent.propTypes = {
+ 
   items: PropTypes.arrayOf(
+  
     PropTypes.shape({
+    
       text: PropTypes.string.isRequired,
+      
     })
+    
   ),
+  
 };
+
 `
 
 e. In the **List** component, the propTypes for the **items** prop is incorrectly assigned to
