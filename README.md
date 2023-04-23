@@ -41,4 +41,10 @@ d. The **propTypes** for the **items** prop of **WrappedListComponent** is not c
 e. In the **List** component, the propTypes for the **items** prop is incorrectly assigned to
 **null**. Instead it should be set to an empty array **[]** as shown below.
 
+```
+WrappedListComponent.defaultProps = {
+  items: [],
+};
+
+```
 
