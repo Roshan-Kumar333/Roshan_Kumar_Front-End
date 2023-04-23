@@ -10,6 +10,7 @@ The **List** component uses the **useState** hook to keep track of the currently
  ## 2 What problems / warnings are there with code?
 I encountered following problems/warnings while going through the given code.
 
-### a. In the **Single List Item Component**, the **onClickHandler** Function will be invoked immediately as soon as the app gets rendered
-```onClick={onClickHandler(index)}```
-### Instead of this we should assign a callback function to the **onClick** event such that the **onClickHandler** function will be invoked only when the corresponding event occurs
+a. In the **Single List Item Component**, the **onClickHandler** Function will be invoked immediately as soon as the app gets rendered
+`onClick={onClickHandler(index)}`
+Instead of this we should assign a callback function to the **onClick** event such that the **onClickHandler** function will be invoked only when the corresponding event occurs like shown below
+`onClick={() => onClickHandler(index)}`
